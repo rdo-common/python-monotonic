@@ -31,7 +31,7 @@ On Python 3.3 or newer, ``monotonic`` will be an alias of
 it will fall back to an equivalent platform specific implementation.
 
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %package -n python3-%{pypi_name}
 Summary:        An implementation of time.monotonic() for Python 2 & < 3.3
 
@@ -64,7 +64,7 @@ cp -a . %{py3dir}
 %build
 %{__python2} setup.py build
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 pushd %{py3dir}
 %{__python3} setup.py build
 popd
@@ -74,7 +74,7 @@ popd
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 pushd %{py3dir}
 %{__python3} setup.py install --skip-build --root %{buildroot}
 popd
@@ -86,7 +86,7 @@ popd
 %{python2_sitelib}/%{pypi_name}.py*
 %{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 #%license LICENSE
 %{python3_sitelib}/__pycache__/%{pypi_name}.*
