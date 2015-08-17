@@ -28,7 +28,7 @@ backwards.
 
 On Python 3.3 or newer, ``monotonic`` will be an alias of
 ``time.monotonic`` from the standard library. On older versions,
-it will fall
+it will fall back to an equivalent platform specific implementation.
 
 
 %if 0%{with_python3}
@@ -46,7 +46,7 @@ backwards.
 
 On Python 3.3 or newer, ``monotonic`` will be an alias of
 ``time.monotonic`` from the standard library. On older versions,
-it will fall
+it will fall back to an equivalent platform specific implementation.
 %endif
 
 
