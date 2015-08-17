@@ -5,7 +5,7 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        0.1
+Version:        0.3
 Release:        1%{?dist}
 Summary:        An implementation of time.monotonic() for Python 2 & < 3.3
 
@@ -95,5 +95,8 @@ popd
 %endif
 
 %changelog
+* Tue Aug 18 2015 Alan Pevec <alan.pevec@redhat.com> 0.3-1
+- Update to upstream 0.3
+
 * Thu Jun 18 2015 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1-1
 - Initial package
