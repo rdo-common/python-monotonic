@@ -6,7 +6,7 @@
 
 Name:           python-%{pypi_name}
 Version:        0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An implementation of time.monotonic() for Python 2 & < 3.3
 
 # Missing license file from source package
@@ -95,6 +95,9 @@ popd
 %endif
 
 %changelog
+* Tue Nov 10 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Changes/python3.5
+
 * Tue Aug 18 2015 Alan Pevec <alan.pevec@redhat.com> 0.3-1
 - Update to upstream 0.3
 
