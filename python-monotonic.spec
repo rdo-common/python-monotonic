@@ -5,15 +5,15 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        0.5
-Release:        3%{?dist}
+Version:        0.6
+Release:        1%{?dist}
 Summary:        An implementation of time.monotonic() for Python 2 & < 3.3
 
 # Missing license file from source package
 # https://github.com/atdt/monotonic/pull/4
 License:        ASL 2.0
 URL:            https://github.com/atdt/%{pypi_name}
-Source0:        https://pypi.python.org/packages/source/m/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/m/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
  
 BuildRequires:  python2-devel
@@ -95,6 +95,10 @@ popd
 %endif
 
 %changelog
+* Tue Sep  6 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.6-1
+- Upstream 0.6
+- Fix Source0 URL
+
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.5-3
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
